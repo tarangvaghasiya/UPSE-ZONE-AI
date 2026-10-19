@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UPSC ZONE AI – Crack UPSC with your Ultimate AI Partner</title>
+<style>
+/* ===== Colours: change them here ===== */
+:root{
+  --bg:#f5f6ff; --white:#ffffff; --soft:#eceeff;
+  --primary:#6366f1; --accent:#d97706;
+  --text:#12172e; --muted:#566089; --line:#d9ddf5;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+/* ===== Base ===== */
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font-family:system-ui,"Segoe UI",Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+section{padding:60px 0}
+.wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+.tag{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+h2{font-size:32px;line-height:1.2;margin:6px 0 10px}
+.sub{color:var(--muted);max-width:600px;margin-bottom:28px}
+.gold{color:var(--accent);font-weight:700}
+.link{color:var(--primary)}
+
+/* ===== Buttons ===== */
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;font-weight:700;border:1px solid var(--line);background:var(--white)}
+.btn.main{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* ===== Cards ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card:hover{border-color:var(--primary)}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:14px}
+.ico{font-size:30px;margin-bottom:8px}
+.num2{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:grid;place-items:center;margin-bottom:10px}
+.badge{display:inline-block;margin-top:10px;background:var(--soft);padding:3px 12px;border-radius:99px;font-size:13px;font-weight:700;color:var(--accent)}
+
+/* ===== Navigation ===== */
+nav{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:18px}.logo b{color:var(--accent)}
+.links{display:flex;gap:20px;font-size:14px;color:var(--muted)}
+@media(max-width:800px){.links{display:none}}
+
+/* ===== Hero ===== */
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+h1{font-size:48px;line-height:1.1;margin:14px 0}
+h1 span{color:var(--primary)}
+.pill{display:inline-block;border:1px solid var(--line);background:var(--white);padding:5px 14px;border-radius:99px;font-size:13px;color:var(--muted)}
+.hero p{color:var(--muted)}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+.stats{display:flex;gap:30px;flex-wrap:wrap}
+.stats b{display:block;font-size:26px}
+.stats small{color:var(--muted)}
+.idcard{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 20px 40px -20px rgba(99,102,241,.4)}
+.idcard .top{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.ok{color:#16a34a;font-weight:700}
+.idcard .row{display:flex;gap:14px;align-items:center;margin:18px 0}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--soft);display:inline-grid;place-items:center;font-size:20px}
+.chip{display:inline-block;background:var(--soft);padding:5px 12px;border-radius:99px;font-size:13px;margin:6px 6px 0 0}
+
+/* ===== Backed-by strip ===== */
+.strip{border-block:1px solid var(--line);background:var(--white);padding:16px 0;overflow:hidden;color:var(--muted);font-weight:700}
+.strip div{display:flex;gap:60px;width:max-content;animation:slide 22s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ===== Tool filter ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tabs button{border:1px solid var(--line);background:var(--white);color:var(--muted);padding:8px 16px;border-radius:99px;cursor:pointer}
+.tabs button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* ===== AI mentor chat ===== */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+@media(max-width:850px){.two{grid-template-columns:1fr}}
+.question{background:var(--primary);color:#fff;padding:10px 14px;border-radius:14px 14px 4px 14px;width:fit-content;margin:0 0 12px auto;font-size:14px}
+.answer{background:var(--soft);padding:16px;border-radius:14px 14px 14px 4px;font-size:14px}
+.answer ul{margin:8px 0 12px 18px;color:var(--muted)}
+
+/* ===== Study planner ===== */
+.planner{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:28px}
+input[type=range]{width:100%;accent-color:var(--accent);margin:12px 0}
+.split{display:flex;flex-wrap:wrap;gap:20px;color:var(--muted);font-size:14px}
+.split b{color:var(--text)}
+
+/* ===== Reviews + map ===== */
+.summary{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;margin-bottom:30px}
+@media(max-width:700px){.summary{grid-template-columns:1fr}}
+.big{font-size:54px;font-weight:800;line-height:1;text-align:center}
+.stars{color:var(--accent);letter-spacing:2px}
+.bar{display:grid;grid-template-columns:30px 1fr 40px;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin:4px 0}
+.bar i,.state i{display:block;height:8px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bar u,.state u{display:block;height:100%;background:var(--accent)}
+.board{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:26px;align-items:center}
+@media(max-width:950px){.board{grid-template-columns:1fr 1fr}.mapbox{grid-column:1/-1;order:-1}}
+@media(max-width:600px){.board{grid-template-columns:1fr}}
+.col{display:grid;gap:28px}
+/* pinned review note (colour comes from .c1 / .c2 / .c3) */
+.c1{--c:#d97706}.c2{--c:#6366f1}.c3{--c:#a855f7}
+.note{position:relative;background:var(--white);border:2px solid var(--c);border-radius:16px;padding:16px 18px}
+.note:before{content:"";position:absolute;top:-9px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--c)}
+.note .num{color:var(--c);font-size:13px}
+.note .who{display:flex;gap:10px;align-items:center;margin:6px 0}
+.note .stars{margin-left:auto;font-size:13px}
+.note p{font-size:14px;color:var(--muted)}
+/* map */
+.mapwrap{position:relative;max-width:380px;margin:0 auto}
+.mapwrap svg{width:100%;display:block}
+.india{fill:var(--soft);stroke:var(--primary)}
+.st{fill:var(--primary);stroke:var(--white);stroke-width:1;cursor:pointer}
+.st:hover{stroke:var(--accent);stroke-width:2}
+.slb{font-size:6.5px;font-weight:700;fill:var(--text);text-anchor:middle;pointer-events:none}
+.pin{position:absolute;transform:translate(-50%,-100%);padding-bottom:10px}
+.pin span{width:34px;height:34px;border-radius:50%;background:var(--white);border:3px solid var(--c);display:grid;place-items:center}
+.pin:after{content:"";position:absolute;left:50%;bottom:0;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--c)}
+.tip{position:absolute;pointer-events:none;background:var(--white);border:1px solid var(--accent);padding:5px 10px;border-radius:8px;font-size:12px;white-space:nowrap;transform:translate(-50%,-140%);opacity:0}
+.tip.on{opacity:1}
+.legend{text-align:center;font-size:12px;color:var(--muted);margin-top:8px}
+.states{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:14px}
+.state{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted)}
+.state b{display:block;font-size:18px;color:var(--accent)}
+
+/* ===== FAQ + call to action + footer ===== */
+details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin-top:8px;font-size:14px}
+.cta{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border-radius:22px;padding:40px;text-align:center}
+.cta .btn{background:#fff;color:var(--text);margin-top:16px}
+footer{border-top:1px solid var(--line);background:var(--white);padding:40px 0 24px;color:var(--muted);font-size:14px}
+.cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:24px}
+@media(max-width:760px){.cols{grid-template-columns:1fr 1fr}}
+footer h4{color:var(--text);margin-bottom:8px}
+footer a{display:block;margin-bottom:5px}
+.help{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--accent);color:#fff;font-weight:700;padding:12px 18px;border-radius:99px;z-index:20}
+/* ===== Animations ===== */
+/* hero: text slides up on load, ID card floats */
+.hero .wrap>div:first-child{animation:up .8s both}
+.idcard{animation:float 5s ease-in-out infinite}
+@keyframes up{from{opacity:0;transform:translateY(30px)}}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* cards, notes, FAQ etc. fade in when scrolled into view (class added by JS) */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+.card:hover,.note:hover{transform:translateY(-5px);box-shadow:0 14px 28px -14px rgba(99,102,241,.5)}
+
+/* buttons, floating help button, animated call-to-action */
+.btn{transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px -8px rgba(99,102,241,.6)}
+.help{animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.cta{background-size:200% 200%;animation:shift 8s ease infinite}
+@keyframes shift{50%{background-position:100% 50%}}
+
+/* map: states fade in one by one, pins drop in and pulse */
+.mapwrap .st{opacity:0;transition:opacity .5s,fill-opacity .3s}
+.mapwrap.play .st{opacity:1}
+.mapwrap .pin{opacity:0}
+.mapwrap.play .pin{animation:drop .6s both}
+@keyframes drop{from{opacity:0;transform:translate(-50%,-220%)}to{opacity:1;transform:translate(-50%,-100%)}}
+.pin:after{animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--c)}100%{box-shadow:0 0 0 12px transparent}}
+
+/* respect people who turn animations off */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.mapwrap .st,.mapwrap .pin{opacity:1!important;transform:none!important}
+  .pin{transform:translate(-50%,-100%)!important}
+}
+/* ===== Review cards: flip 180° on hover (tap on phones) ===== */
+.note{perspective:900px;height:200px;padding:0;border:none;background:none}
+.note:before{z-index:3}
+.flip{position:relative;width:100%;height:100%;transition:transform .8s;transform-style:preserve-3d}
+.note:hover .flip,.note:focus .flip{transform:rotateY(180deg)}
+.front,.back{position:absolute;inset:0;border:2px solid var(--c);border-radius:16px;background:var(--white);padding:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.front{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center}
+.front .avatar{width:52px;height:52px;font-size:26px}
+.front .num{position:absolute;top:12px;left:16px}
+.back{transform:rotateY(180deg);overflow:hidden}
+.back .num{display:none}
+.hint{font-size:12px;color:var(--c);margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav><div class="wrap">
+  <a class="logo" href="#">UPSC ZONE <b>AI</b></a>
+  <div class="links"><a href="#ai-tools">AI Tools</a><a href="#planner">Planner</a><a href="#mentors">Mentors</a><a href="#success-stories">Success Stories</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></div>
+  <a class="btn main" href="https://upsczone.in/dashboard">Start Free</a>
+</div></nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero section"><div class="wrap">
+  <div>
+    <span class="pill">🇮🇳 India’s First AI Operating System for UPSC</span>
+    <h1>Crack UPSC with your <span>Ultimate AI Partner</span></h1>
+    <p>AI Answer Evaluation • Smart PYQs • Daily Current Affairs AI Mentor • Test Series • Hindi + English</p>
+    <div class="buttons"><a class="btn main" href="https://upsczone.in/dashboard">Start Preparing Free</a><a class="btn" href="#demo">▶ Watch AI Demo</a></div>
+    <div class="stats"><div><b class="count" data-to="25000" data-suffix="+" data-dec="0">25,000+</b><small>Trusted Aspirants</small></div><div><b class="count" data-to="1.2" data-suffix="M+" data-dec="1">1.2M+</b><small>Questions Practiced</small></div><div><b class="count" data-to="4.8" data-suffix="/5" data-dec="1">4.8/5</b><small>App Rating</small></div></div>
+  </div>
+  <div class="idcard">
+    <div class="top"><span>UPSC ZONE AI · CSE 2027 AUTHORIZED</span><span class="ok">● AI VERIFIED</span></div>
+    <div class="row"><span class="avatar">🧠</span><div><b>Aspirant</b><br><small>UZ-2027-00842</small></div></div>
+    <p><small>Target:</small> Civil Services Examination<br><small>Medium:</small> Hindi + English<br><small>Status:</small> <span class="ok">PREP ACTIVE</span></p>
+    <span class="chip">🔥 42-day streak</span><span class="chip">✅ Mains score: 104/120</span>
+  </div>
+</div></header>
+
+<div class="strip"><div><span>NVIDIA Inception</span><span>AWS Startups</span><span>Google for Startups</span><span>Sarvam AI</span><span>Carta</span><span>NVIDIA Inception</span><span>AWS Startups</span><span>Google for Startups</span><span>Sarvam AI</span><span>Carta</span></div></div>
+
+<!-- ===== AI tools (with filter) ===== -->
+<section id="ai-tools"><div class="wrap">
+  <span class="tag">Platform</span><h2>All-in-One AI Platform for UPSC</h2><p class="sub">Eight AI tools, one dashboard. Filter by what you need right now.</p>
+  <div class="tabs"><button class="on" data-filter="all">All</button><button data-filter="learn">Learn</button><button data-filter="practice">Practice</button><button data-filter="plan">Plan &amp; Analyze</button></div>
+  <div class="grid" id="tools"><div class="card" data-type="learn"><div class="ico">🤖</div><h3>UPSC GPT</h3><p>Ask anything about UPSC. Get instant, accurate AI-powered answers.</p></div><div class="card" data-type="practice"><div class="ico">📝</div><h3>Mains Answer Evaluator</h3><p>Detailed AI evaluation with scores, feedback & improvement tips.</p></div><div class="card" data-type="learn"><div class="ico">📰</div><h3>Current Affairs</h3><p>Daily, weekly & monthly current affairs with AI summaries.</p></div><div class="card" data-type="practice"><div class="ico">📋</div><h3>Test Generator</h3><p>Generate chapter-wise or full-length tests instantly.</p></div><div class="card" data-type="plan"><div class="ico">🗺️</div><h3>AI Roadmaps</h3><p>Personalized study plan based on your goals and time.</p></div><div class="card" data-type="plan"><div class="ico">📊</div><h3>PYQ Analyzer</h3><p>Analyze PYQs with AI insights & important topics.</p></div><div class="card" data-type="learn"><div class="ico">💬</div><h3>AI Doubt Solver</h3><p>Upload notes or ask questions and AI will explain.</p></div><div class="card" data-type="learn"><div class="ico">🏛️</div><h3>Govt. Schemes AI</h3><p>Understand schemes, reports & policies in simple language.</p></div></div>
+</div></section>
+
+<!-- ===== How it works ===== -->
+<section><div class="wrap">
+  <span class="tag">How it works</span><h2>From sign-up to rank list in 3 steps</h2><p class="sub">No complicated setup. Start free and let the AI adapt to you.</p>
+  <div class="grid"><div class="card"><div class="num2">1</div><h3>Tell us your goal</h3><p>Pick your medium, attempt year and daily hours. Your roadmap is built in seconds.</p></div><div class="card"><div class="num2">2</div><h3>Study, practice, write</h3><p>Read AI-summarised current affairs, attempt tests and submit answers for evaluation.</p></div><div class="card"><div class="num2">3</div><h3>Track & improve</h3><p>Analytics show weak topics, and your plan updates itself every week.</p></div></div>
+</div></section>
+
+<!-- ===== Current affairs ===== -->
+<section><div class="wrap">
+  <span class="tag">Daily Briefing</span><h2>Today’s Top Current Affairs</h2><p class="sub">Latest news curated for UPSC Prelims &amp; Mains</p>
+  <div class="grid"><a class="card" href="https://upsczone.in/current-affairs/2026-10-19/shall-we-review-more-economic-and-governance-highlights-from-the-september-2026"><small class="gold">Oct 19, 2026 · Economy</small><h3>PIB PRISM September 2026: economic & governance highlights</h3><p>Real GDP grew 7.8% in Q1 2026–27, outperforming the Reserve Bank’s estimate.</p><b class="link">Read AI Summary →</b></a><a class="card" href="https://upsczone.in/current-affairs/2026-10-19/summary-of-19-october-current-affairs"><small class="gold">Oct 19, 2026 · National</small><h3>Summary of 19 October current affairs</h3><p>A new direct train service links Sabarmati in Gujarat to Katra.</p><b class="link">Read AI Summary →</b></a><a class="card" href="https://upsczone.in/current-affairs/2026-10-19/what-are-the-priority-biodiversity-targets-for-2030"><small class="gold">Oct 19, 2026 · Environment</small><h3>Priority biodiversity targets for 2030</h3><p>Under the Kunming-Montreal framework, the goal is to halt and reverse biodiversity loss.</p><b class="link">Read AI Summary →</b></a></div>
+  <p style="margin-top:20px"><a class="btn" href="https://upsczone.in/current-affairs">View All</a></p>
+</div></section>
+
+<!-- ===== AI mentor demo ===== -->
+<section id="demo"><div class="wrap two">
+  <div><span class="tag">AI Mentor</span><h2>Ask Your AI Mentor</h2><p class="sub">Instant UPSC-standard explanations for your complex doubts, any time of day.</p><a class="btn main" href="https://upsczone.in/dashboard">Ask Your AI Mentor</a></div>
+  <div class="card">
+    <div class="question">Explain the Doctrine of Basic Structure. What are its origins?</div>
+    <div class="answer"><b>🤖 Doctrine of Basic Structure</b><br>A judicial principle that certain fundamental features of the Constitution cannot be altered or destroyed by Parliament.
+      <ul><li>Originates from <b>Kesavananda Bharati v. State of Kerala (1973)</b></li><li>Prevents damage to the “Spirit of the Constitution”</li><li>Maintains <b>Supremacy of the Constitution</b></li></ul>
+      <span class="chip">Rule of Law</span><span class="chip">Judicial Review</span><span class="chip">Secularism</span><span class="chip">Federal Character</span></div>
+  </div>
+</div></section>
+
+<!-- ===== Features ===== -->
+<section id="features"><div class="wrap">
+  <span class="tag">Features</span><h2>Everything You Need to Conquer UPSC</h2><p class="sub">A complete preparation ecosystem, powered by AI.</p>
+  <div class="grid"><div class="card "><div class="ico">🎯</div><h3>Hyper-Personalized Path</h3><p>AI analyzes your strengths and weaknesses to create a dynamic study plan.</p></div><div class="card "><div class="ico">⚡</div><h3>Instant Feedback</h3><p>Immediate, UPSC-standard evaluations on your subjective answers.</p></div><div class="card "><div class="ico">⚔️</div><h3>Real-Time Battles</h3><p>Challenge peers in live quiz battles and climb the leaderboard.</p></div><div class="card "><div class="ico">📚</div><h3>Comprehensive Courses</h3><p>NCERT and GS courses with expert-led lessons and practice questions.</p></div><div class="card "><div class="ico">📰</div><h3>Current Affairs</h3><p>Daily news, articles and quizzes to stay updated.</p></div><div class="card "><div class="ico">📈</div><h3>Performance Analytics</h3><p>Detailed breakdown of your progress, strengths and areas to improve.</p></div></div>
+</div></section>
+
+<!-- ===== Study planner ===== -->
+<section id="planner"><div class="wrap"><div class="planner">
+  <span class="tag">Try it</span><h2>Quick study-hours splitter</h2>
+  <label for="hours"><b>I can study <span id="hours-text" class="gold">6</span> hours a day</b></label>
+  <input id="hours" type="range" min="2" max="14" value="6">
+  <div class="split"><span>📘 Static GS <b id="t1"></b></span><span>📰 Current Affairs <b id="t2"></b></span><span>✍️ Answer Writing <b id="t3"></b></span><span>🔁 Revision <b id="t4"></b></span></div>
+</div></div></section>
+
+<!-- ===== Mentors ===== -->
+<section id="mentors"><div class="wrap">
+  <span class="tag">Mentors</span><h2>Find a UPSC mentor</h2><p class="sub">Experienced mentors you can hire directly. Browse by subject and language, see what they charge, and get in touch.</p>
+  <div class="grid"><a class="card" href="https://upsczone.in/mentors/ashish-kumar-shrivastava"><div class="ico">👨‍🏫</div><h3>Ashish Kumar Shrivastava</h3><p>25+ Years Mentoring Top Ranks | Polity & Philosophy Specialist</p><b class="gold">₹99 per hour</b></a><a class="card" href="https://upsczone.in/mentors/pradeep-chaudhary"><div class="ico">👨‍🏫</div><h3>Pradeep Chaudhary</h3><p>International Relations, Sociology, Economics, Polity</p><b class="gold">₹99 per hour</b></a><a class="card" href="https://upsczone.in/mentors/satendra-singh"><div class="ico">👨‍🏫</div><h3>Satendra Singh</h3><p>5+ Yr Experience</p><b class="gold">₹99 per hour</b></a></div>
+  <p style="margin-top:20px"><a class="btn" href="https://upsczone.in/mentors">All mentors</a></p>
+</div></section>
+
+<!-- ===== Success stories ===== -->
+<section id="success-stories"><div class="wrap">
+  <span class="tag">Results</span><h2>Success Stories That Inspire</h2><p class="sub">Real results from aspirants who made UPSC ZONE AI part of their routine.</p>
+  <div class="grid"><div class="card"><div class="ico">A</div><h3>Ananya Singh</h3><small class="gold">AIR 68 • UPSC CSE 2023</small><p>“UPSC ZONE AI helped me improve my answer writing from 72 to 104 in just 3 months.”</p><span class="badge">Score 72 → 104</span></div><div class="card"><div class="ico">R</div><h3>Rohit Verma</h3><small class="gold">AIR 132 • UPSC CSE 2023</small><p>“The AI feedback is so accurate, it’s like having a personal mentor 24x7!”</p><span class="badge">689/900</span></div><div class="card"><div class="ico">S</div><h3>Sneha Reddy</h3><small class="gold">AIR 201 • UPSC CSE 2023</small><p>“Current affairs + AI summaries saved me 2 hours daily. Highly recommended!”</p><span class="badge">2+ hours saved daily</span></div></div>
+</div></section>
+
+<!-- ===== Reviews + India map ===== -->
+<section id="reviews"><div class="wrap">
+  <span class="tag">Reviews</span><h2>Loved by aspirants across India</h2><p class="sub">Hover or tap a state on the map to see how many aspirants reviewed from there. (Sample data.)</p>
+  <div class="card summary">
+    <div><div class="big">4.8</div><div class="stars" style="text-align:center">★★★★★</div><small>19,440 reviews</small></div>
+    <div><div class="bar"><span>5★</span><i><u style="width:82%"></u></i><span>82%</span></div><div class="bar"><span>4★</span><i><u style="width:13%"></u></i><span>13%</span></div><div class="bar"><span>3★</span><i><u style="width:3%"></u></i><span>3%</span></div><div class="bar"><span>2★</span><i><u style="width:1%"></u></i><span>1%</span></div><div class="bar"><span>1★</span><i><u style="width:1%"></u></i><span>1%</span></div></div>
+  </div>
+  <div class="board">
+    <div class="col"><article class="note c1"><div class="flip"><div class="front"><b class="num">01</b><span class="avatar">😊</span><b>Aspirant A</b><small>📍 New Delhi</small><span class="hint">Hover to flip ↻</span></div><div class="back"><b class="num">01</b><div class="who"><span class="avatar">😊</span><div><b>Aspirant A</b><br><small>📍 New Delhi</small></div><span class="stars">★★★★★</span></div><p>“My GS answers get evaluated in minutes, and the scores show exactly where I lose marks.”</p></div></div></article><article class="note c2"><div class="flip"><div class="front"><b class="num">02</b><span class="avatar">🧑</span><b>Aspirant B</b><small>📍 Jaipur</small><span class="hint">Hover to flip ↻</span></div><div class="back"><b class="num">02</b><div class="who"><span class="avatar">🧑</span><div><b>Aspirant B</b><br><small>📍 Jaipur</small></div><span class="stars">★★★★★</span></div><p>“I upload photos of handwritten answers and get them back marked like an examiner went through them.”</p></div></div></article><article class="note c3"><div class="flip"><div class="front"><b class="num">03</b><span class="avatar">👨</span><b>Aspirant C</b><small>📍 Pune</small><span class="hint">Hover to flip ↻</span></div><div class="back"><b class="num">03</b><div class="who"><span class="avatar">👨</span><div><b>Aspirant C</b><br><small>📍 Pune</small></div><span class="stars">★★★★★</span></div><p>“PYQ explanations are gold. I stopped juggling five apps and practise here now.”</p></div></div></article></div>
+    <div class="mapbox">
+      <div class="mapwrap" id="map"><svg viewBox="0 0 375 385" role="img" aria-label="Map of India with review locations">
+<defs><clipPath id="cl"><path d="M76.5,2.0 88.5,0.5 96.5,3.0 108.5,12.0 116.0,15.8 126.5,18.0 133.0,19.3 142.0,20.8 146.7,22.5 152.0,26.3 152.8,31.5 149.8,43.5 146.0,49.0 137.8,53.5 134.8,57.0 134.0,63.0 134.8,67.2 137.7,74.0 141.5,77.8 149.8,82.2 154.5,84.0 160.5,84.8 160.8,87.0 155.5,93.0 153.2,96.5 151.7,101.0 153.5,103.2 160.2,105.5 166.2,108.0 177.5,113.2 185.0,116.0 196.2,119.0 203.8,121.5 215.0,126.0 222.5,128.5 233.8,131.5 240.2,132.3 248.5,131.5 251.2,129.2 251.2,123.2 252.8,119.2 257.3,113.2 259.3,113.2 260.8,119.2 263.5,122.8 270.2,127.2 277.0,128.5 290.5,127.8 296.2,125.0 300.0,117.5 304.8,113.2 315.2,108.0 320.8,104.2 326.7,98.2 332.5,96.2 343.7,96.2 349.2,98.2 354.5,104.2 358.5,107.0 365.3,109.3 366.0,112.0 361.5,118.0 361.2,121.0 365.0,124.0 363.0,126.2 353.2,130.0 348.0,132.5 342.0,136.2 339.5,139.5 338.0,145.5 336.5,150.0 333.5,157.5 331.7,162.5 329.5,170.0 326.5,173.5 319.8,176.5 316.8,176.0 314.5,171.5 312.5,173.3 308.7,183.0 306.7,184.0 304.5,177.2 303.7,172.5 303.7,165.0 302.8,162.0 299.8,160.5 297.8,161.8 294.8,167.0 293.0,170.0 290.8,173.8 290.0,172.5 290.0,165.0 292.0,159.8 298.0,151.5 300.5,149.2 302.0,150.8 300.8,150.5 295.5,148.2 290.5,147.5 280.8,147.5 276.5,147.2 273.5,146.5 272.5,144.5 272.5,139.2 270.5,136.5 264.5,133.5 261.8,132.8 259.5,133.5 258.0,135.0 255.8,138.8 254.0,141.5 251.0,146.0 250.5,149.2 252.0,154.5 253.5,157.2 256.5,160.2 257.8,163.5 258.5,170.2 259.5,175.2 261.8,183.5 262.2,187.5 261.5,191.2 259.3,192.2 253.2,191.5 248.5,191.8 240.2,193.2 237.2,195.5 236.5,200.8 235.0,204.2 231.3,209.5 227.3,212.5 219.0,216.2 214.8,218.5 210.3,221.5 207.0,224.2 201.8,229.5 198.2,233.0 193.0,238.2 188.7,242.8 181.2,251.0 176.2,254.8 168.7,257.8 165.2,260.0 162.3,263.8 159.8,266.5 155.2,271.0 153.2,275.5 151.7,284.5 151.7,289.5 153.2,295.5 153.5,299.2 152.8,304.5 151.8,308.5 149.5,315.2 148.5,320.2 147.8,328.5 146.2,331.8 142.5,333.2 140.2,336.2 137.3,343.8 135.0,347.2 131.3,350.2 127.8,353.2 121.0,359.2 117.3,360.2 112.8,357.2 110.3,353.8 107.3,346.2 105.8,342.0 104.2,336.8 102.8,332.2 99.8,324.0 97.3,319.0 92.8,312.2 90.0,308.0 86.2,302.0 84.2,296.5 82.0,286.0 79.8,280.0 75.3,272.5 72.8,267.2 69.8,259.0 68.2,253.2 66.7,244.2 65.0,238.0 61.2,228.2 60.0,222.5 60.0,215.0 60.0,210.8 60.0,205.5 59.5,202.5 58.0,198.8 57.5,195.2 57.5,188.5 56.5,187.7 53.5,192.2 50.0,195.2 42.5,199.8 38.0,201.3 32.0,201.3 27.8,199.8 21.0,195.2 17.4,191.8 13.3,185.8 13.8,183.5 19.4,182.8 23.0,181.3 28.3,177.5 27.8,176.5 21.0,177.2 16.0,175.8 7.8,170.5 4.5,168.0 3.0,165.8 3.5,163.8 6.5,160.0 9.7,159.0 16.5,159.8 20.2,159.8 24.7,159.0 28.7,158.5 36.2,157.8 38.0,154.3 35.7,144.5 33.0,139.0 27.0,132.2 25.5,127.2 27.0,119.0 29.5,115.8 35.5,114.3 39.8,111.3 46.5,103.8 51.3,98.8 58.8,91.3 64.0,86.3 72.3,78.8 77.3,74.3 84.0,68.3 85.5,64.0 83.2,57.2 81.2,54.2 77.5,52.0 77.2,48.8 80.2,41.3 80.0,36.0 76.2,27.8 74.2,23.2 72.0,18.0 71.5,13.5 72.2,5.3Z"/></clipPath>
+<pattern id="dots" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r=".8" fill="#312e81" fill-opacity=".28"/></pattern>
+<pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#fff" stroke-opacity=".35" stroke-width="1.2"/></pattern>
+<filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .19  0 0 0 0 .18  0 0 0 0 .5  0 0 0 .9 -.2"/></filter>
+</defs>
+<path d="M76.5,2.0 88.5,0.5 96.5,3.0 108.5,12.0 116.0,15.8 126.5,18.0 133.0,19.3 142.0,20.8 146.7,22.5 152.0,26.3 152.8,31.5 149.8,43.5 146.0,49.0 137.8,53.5 134.8,57.0 134.0,63.0 134.8,67.2 137.7,74.0 141.5,77.8 149.8,82.2 154.5,84.0 160.5,84.8 160.8,87.0 155.5,93.0 153.2,96.5 151.7,101.0 153.5,103.2 160.2,105.5 166.2,108.0 177.5,113.2 185.0,116.0 196.2,119.0 203.8,121.5 215.0,126.0 222.5,128.5 233.8,131.5 240.2,132.3 248.5,131.5 251.2,129.2 251.2,123.2 252.8,119.2 257.3,113.2 259.3,113.2 260.8,119.2 263.5,122.8 270.2,127.2 277.0,128.5 290.5,127.8 296.2,125.0 300.0,117.5 304.8,113.2 315.2,108.0 320.8,104.2 326.7,98.2 332.5,96.2 343.7,96.2 349.2,98.2 354.5,104.2 358.5,107.0 365.3,109.3 366.0,112.0 361.5,118.0 361.2,121.0 365.0,124.0 363.0,126.2 353.2,130.0 348.0,132.5 342.0,136.2 339.5,139.5 338.0,145.5 336.5,150.0 333.5,157.5 331.7,162.5 329.5,170.0 326.5,173.5 319.8,176.5 316.8,176.0 314.5,171.5 312.5,173.3 308.7,183.0 306.7,184.0 304.5,177.2 303.7,172.5 303.7,165.0 302.8,162.0 299.8,160.5 297.8,161.8 294.8,167.0 293.0,170.0 290.8,173.8 290.0,172.5 290.0,165.0 292.0,159.8 298.0,151.5 300.5,149.2 302.0,150.8 300.8,150.5 295.5,148.2 290.5,147.5 280.8,147.5 276.5,147.2 273.5,146.5 272.5,144.5 272.5,139.2 270.5,136.5 264.5,133.5 261.8,132.8 259.5,133.5 258.0,135.0 255.8,138.8 254.0,141.5 251.0,146.0 250.5,149.2 252.0,154.5 253.5,157.2 256.5,160.2 257.8,163.5 258.5,170.2 259.5,175.2 261.8,183.5 262.2,187.5 261.5,191.2 259.3,192.2 253.2,191.5 248.5,191.8 240.2,193.2 237.2,195.5 236.5,200.8 235.0,204.2 231.3,209.5 227.3,212.5 219.0,216.2 214.8,218.5 210.3,221.5 207.0,224.2 201.8,229.5 198.2,233.0 193.0,238.2 188.7,242.8 181.2,251.0 176.2,254.8 168.7,257.8 165.2,260.0 162.3,263.8 159.8,266.5 155.2,271.0 153.2,275.5 151.7,284.5 151.7,289.5 153.2,295.5 153.5,299.2 152.8,304.5 151.8,308.5 149.5,315.2 148.5,320.2 147.8,328.5 146.2,331.8 142.5,333.2 140.2,336.2 137.3,343.8 135.0,347.2 131.3,350.2 127.8,353.2 121.0,359.2 117.3,360.2 112.8,357.2 110.3,353.8 107.3,346.2 105.8,342.0 104.2,336.8 102.8,332.2 99.8,324.0 97.3,319.0 92.8,312.2 90.0,308.0 86.2,302.0 84.2,296.5 82.0,286.0 79.8,280.0 75.3,272.5 72.8,267.2 69.8,259.0 68.2,253.2 66.7,244.2 65.0,238.0 61.2,228.2 60.0,222.5 60.0,215.0 60.0,210.8 60.0,205.5 59.5,202.5 58.0,198.8 57.5,195.2 57.5,188.5 56.5,187.7 53.5,192.2 50.0,195.2 42.5,199.8 38.0,201.3 32.0,201.3 27.8,199.8 21.0,195.2 17.4,191.8 13.3,185.8 13.8,183.5 19.4,182.8 23.0,181.3 28.3,177.5 27.8,176.5 21.0,177.2 16.0,175.8 7.8,170.5 4.5,168.0 3.0,165.8 3.5,163.8 6.5,160.0 9.7,159.0 16.5,159.8 20.2,159.8 24.7,159.0 28.7,158.5 36.2,157.8 38.0,154.3 35.7,144.5 33.0,139.0 27.0,132.2 25.5,127.2 27.0,119.0 29.5,115.8 35.5,114.3 39.8,111.3 46.5,103.8 51.3,98.8 58.8,91.3 64.0,86.3 72.3,78.8 77.3,74.3 84.0,68.3 85.5,64.0 83.2,57.2 81.2,54.2 77.5,52.0 77.2,48.8 80.2,41.3 80.0,36.0 76.2,27.8 74.2,23.2 72.0,18.0 71.5,13.5 72.2,5.3Z" fill="none" stroke="#6366f1" stroke-opacity=".16" stroke-width="7" stroke-linejoin="round" pointer-events="none"/>
+<path class="india" d="M76.5,2.0 88.5,0.5 96.5,3.0 108.5,12.0 116.0,15.8 126.5,18.0 133.0,19.3 142.0,20.8 146.7,22.5 152.0,26.3 152.8,31.5 149.8,43.5 146.0,49.0 137.8,53.5 134.8,57.0 134.0,63.0 134.8,67.2 137.7,74.0 141.5,77.8 149.8,82.2 154.5,84.0 160.5,84.8 160.8,87.0 155.5,93.0 153.2,96.5 151.7,101.0 153.5,103.2 160.2,105.5 166.2,108.0 177.5,113.2 185.0,116.0 196.2,119.0 203.8,121.5 215.0,126.0 222.5,128.5 233.8,131.5 240.2,132.3 248.5,131.5 251.2,129.2 251.2,123.2 252.8,119.2 257.3,113.2 259.3,113.2 260.8,119.2 263.5,122.8 270.2,127.2 277.0,128.5 290.5,127.8 296.2,125.0 300.0,117.5 304.8,113.2 315.2,108.0 320.8,104.2 326.7,98.2 332.5,96.2 343.7,96.2 349.2,98.2 354.5,104.2 358.5,107.0 365.3,109.3 366.0,112.0 361.5,118.0 361.2,121.0 365.0,124.0 363.0,126.2 353.2,130.0 348.0,132.5 342.0,136.2 339.5,139.5 338.0,145.5 336.5,150.0 333.5,157.5 331.7,162.5 329.5,170.0 326.5,173.5 319.8,176.5 316.8,176.0 314.5,171.5 312.5,173.3 308.7,183.0 306.7,184.0 304.5,177.2 303.7,172.5 303.7,165.0 302.8,162.0 299.8,160.5 297.8,161.8 294.8,167.0 293.0,170.0 290.8,173.8 290.0,172.5 290.0,165.0 292.0,159.8 298.0,151.5 300.5,149.2 302.0,150.8 300.8,150.5 295.5,148.2 290.5,147.5 280.8,147.5 276.5,147.2 273.5,146.5 272.5,144.5 272.5,139.2 270.5,136.5 264.5,133.5 261.8,132.8 259.5,133.5 258.0,135.0 255.8,138.8 254.0,141.5 251.0,146.0 250.5,149.2 252.0,154.5 253.5,157.2 256.5,160.2 257.8,163.5 258.5,170.2 259.5,175.2 261.8,183.5 262.2,187.5 261.5,191.2 259.3,192.2 253.2,191.5 248.5,191.8 240.2,193.2 237.2,195.5 236.5,200.8 235.0,204.2 231.3,209.5 227.3,212.5 219.0,216.2 214.8,218.5 210.3,221.5 207.0,224.2 201.8,229.5 198.2,233.0 193.0,238.2 188.7,242.8 181.2,251.0 176.2,254.8 168.7,257.8 165.2,260.0 162.3,263.8 159.8,266.5 155.2,271.0 153.2,275.5 151.7,284.5 151.7,289.5 153.2,295.5 153.5,299.2 152.8,304.5 151.8,308.5 149.5,315.2 148.5,320.2 147.8,328.5 146.2,331.8 142.5,333.2 140.2,336.2 137.3,343.8 135.0,347.2 131.3,350.2 127.8,353.2 121.0,359.2 117.3,360.2 112.8,357.2 110.3,353.8 107.3,346.2 105.8,342.0 104.2,336.8 102.8,332.2 99.8,324.0 97.3,319.0 92.8,312.2 90.0,308.0 86.2,302.0 84.2,296.5 82.0,286.0 79.8,280.0 75.3,272.5 72.8,267.2 69.8,259.0 68.2,253.2 66.7,244.2 65.0,238.0 61.2,228.2 60.0,222.5 60.0,215.0 60.0,210.8 60.0,205.5 59.5,202.5 58.0,198.8 57.5,195.2 57.5,188.5 56.5,187.7 53.5,192.2 50.0,195.2 42.5,199.8 38.0,201.3 32.0,201.3 27.8,199.8 21.0,195.2 17.4,191.8 13.3,185.8 13.8,183.5 19.4,182.8 23.0,181.3 28.3,177.5 27.8,176.5 21.0,177.2 16.0,175.8 7.8,170.5 4.5,168.0 3.0,165.8 3.5,163.8 6.5,160.0 9.7,159.0 16.5,159.8 20.2,159.8 24.7,159.0 28.7,158.5 36.2,157.8 38.0,154.3 35.7,144.5 33.0,139.0 27.0,132.2 25.5,127.2 27.0,119.0 29.5,115.8 35.5,114.3 39.8,111.3 46.5,103.8 51.3,98.8 58.8,91.3 64.0,86.3 72.3,78.8 77.3,74.3 84.0,68.3 85.5,64.0 83.2,57.2 81.2,54.2 77.5,52.0 77.2,48.8 80.2,41.3 80.0,36.0 76.2,27.8 74.2,23.2 72.0,18.0 71.5,13.5 72.2,5.3Z"/>
+<!-- one path per state; JS only adds colour + tooltip -->
+<g clip-path="url(#cl)">
+<path class="st" data-name="Jammu &amp; Kashmir" data-count="140" d="M-50,-50 98,-50 113,54 101,67 29,77 -50,68Z"/>
+<path class="st" data-name="Ladakh" data-count="10" d="M98,-50 268,-50 217,34 141,60 113,54Z"/>
+<path class="st" data-name="Himachal Pradesh" data-count="160" d="M109,82 101,67 113,54 141,60 119,86Z"/>
+<path class="st" data-name="Punjab" data-count="350" d="M29,77 101,67 109,82 87,93Z"/>
+<path class="st" data-name="Uttarakhand" data-count="300" d="M207,69 132,106 119,88 119,86 141,60 217,34Z"/>
+<path class="st" data-name="Haryana" data-count="800" d="M87,93 109,82 119,86 119,88 106,108Z"/>
+<path class="st" data-name="Delhi" data-count="2100" d="M121,129 106,108 119,88 132,106 121,129Z"/>
+<path class="st" data-name="Rajasthan" data-count="1500" d="M-50,96 -50,68 29,77 87,93 106,108 121,129 84,178Z"/>
+<path class="st" data-name="Uttar Pradesh" data-count="3200" d="M121,129 132,106 207,69 208,76 191,153 184,162 170,165Z"/>
+<path class="st" data-name="Bihar" data-count="2400" d="M191,153 208,76 246,138 230,156Z"/>
+<path class="st" data-name="Sikkim" data-count="20" d="M268,-50 281,-50 290,94 281,120 265,142 246,138 208,76 207,69 217,34Z"/>
+<path class="st" data-name="Arunachal Pradesh" data-count="30" d="M281,-50 430,-50 430,130 322,130 290,94Z"/>
+<path class="st" data-name="Assam" data-count="220" d="M281,120 290,94 322,130 321,142 307,154 303,152Z"/>
+<path class="st" data-name="Nagaland" data-count="25" d="M430,130 430,184 321,142 322,130Z"/>
+<path class="st" data-name="Manipur" data-count="45" d="M430,184 430,256 308,155 307,154 321,142Z"/>
+<path class="st" data-name="Mizoram" data-count="15" d="M430,256 430,420 369,420 315,358 274,234 308,155Z"/>
+<path class="st" data-name="Meghalaya" data-count="35" d="M265,142 281,120 303,152 273,160Z"/>
+<path class="st" data-name="Tripura" data-count="40" d="M273,160 303,152 307,154 308,155 274,234 273,232Z"/>
+<path class="st" data-name="West Bengal" data-count="600" d="M233,191 230,156 246,138 265,142 273,160 273,232Z"/>
+<path class="st" data-name="Jharkhand" data-count="600" d="M184,162 191,153 230,156 233,191 197,180Z"/>
+<path class="st" data-name="Odisha" data-count="380" d="M179,240 177,237 197,180 233,191 273,232 274,234 315,358 258,323Z"/>
+<path class="st" data-name="Chhattisgarh" data-count="280" d="M146,207 170,165 184,162 197,180 177,237 147,210Z"/>
+<path class="st" data-name="Madhya Pradesh" data-count="1300" d="M84,178 121,129 121,129 170,165 146,207 84,179Z"/>
+<path class="st" data-name="Gujarat" data-count="900" d="M-50,277 -50,96 84,178 84,179 54,233Z"/>
+<path class="st" data-name="Maharashtra" data-count="1200" d="M54,233 84,179 146,207 147,210 118,254 88,251Z"/>
+<path class="st" data-name="Telangana" data-count="700" d="M118,254 147,210 177,237 179,240 120,256Z"/>
+<path class="st" data-name="Andhra Pradesh" data-count="400" d="M131,295 120,256 179,240 258,323Z"/>
+<path class="st" data-name="Karnataka" data-count="650" d="M60,314 88,251 118,254 120,256 131,295 113,306Z"/>
+<path class="st" data-name="Goa" data-count="40" d="M-50,363 -50,277 54,233 88,251 60,314Z"/>
+<path class="st" data-name="Kerala" data-count="450" d="M124,420 -50,420 -50,363 60,314 113,306Z"/>
+<path class="st" data-name="Tamil Nadu" data-count="550" d="M369,420 124,420 113,306 131,295 258,323 315,358Z"/>
+</g>
+<!-- texture: dots + hatch + paper grain, clipped to India -->
+<g clip-path="url(#cl)" pointer-events="none"><rect width="375" height="385" fill="url(#dots)"/><rect width="375" height="385" fill="url(#hatch)"/><rect width="375" height="385" filter="url(#grain)" opacity=".35"/></g>
+<text class="slb" x="87" y="42">JK</text>
+<text class="slb" x="122" y="37">LA</text>
+<text class="slb" x="115" y="66">HP</text>
+<text class="slb" x="92" y="78">PB</text>
+<text class="slb" x="140" y="88">UK</text>
+<text class="slb" x="102" y="99">HR</text>
+<text class="slb" x="77" y="132">RJ</text>
+<text class="slb" x="160" y="129">UP</text>
+<text class="slb" x="219" y="142">BR</text>
+<text class="slb" x="331" y="114">AR</text>
+<text class="slb" x="306" y="136">AS</text>
+<text class="slb" x="247" y="167">WB</text>
+<text class="slb" x="217" y="169">JH</text>
+<text class="slb" x="205" y="208">OD</text>
+<text class="slb" x="175" y="198">CG</text>
+<text class="slb" x="129" y="171">MP</text>
+<text class="slb" x="44" y="186">GJ</text>
+<text class="slb" x="106" y="221">MH</text>
+<text class="slb" x="137" y="241">TS</text>
+<text class="slb" x="144" y="266">AP</text>
+<text class="slb" x="100" y="279">KA</text>
+<text class="slb" x="108" y="332">KL</text>
+<text class="slb" x="130" y="330">TN</text>
+<path d="M76.5,2.0 88.5,0.5 96.5,3.0 108.5,12.0 116.0,15.8 126.5,18.0 133.0,19.3 142.0,20.8 146.7,22.5 152.0,26.3 152.8,31.5 149.8,43.5 146.0,49.0 137.8,53.5 134.8,57.0 134.0,63.0 134.8,67.2 137.7,74.0 141.5,77.8 149.8,82.2 154.5,84.0 160.5,84.8 160.8,87.0 155.5,93.0 153.2,96.5 151.7,101.0 153.5,103.2 160.2,105.5 166.2,108.0 177.5,113.2 185.0,116.0 196.2,119.0 203.8,121.5 215.0,126.0 222.5,128.5 233.8,131.5 240.2,132.3 248.5,131.5 251.2,129.2 251.2,123.2 252.8,119.2 257.3,113.2 259.3,113.2 260.8,119.2 263.5,122.8 270.2,127.2 277.0,128.5 290.5,127.8 296.2,125.0 300.0,117.5 304.8,113.2 315.2,108.0 320.8,104.2 326.7,98.2 332.5,96.2 343.7,96.2 349.2,98.2 354.5,104.2 358.5,107.0 365.3,109.3 366.0,112.0 361.5,118.0 361.2,121.0 365.0,124.0 363.0,126.2 353.2,130.0 348.0,132.5 342.0,136.2 339.5,139.5 338.0,145.5 336.5,150.0 333.5,157.5 331.7,162.5 329.5,170.0 326.5,173.5 319.8,176.5 316.8,176.0 314.5,171.5 312.5,173.3 308.7,183.0 306.7,184.0 304.5,177.2 303.7,172.5 303.7,165.0 302.8,162.0 299.8,160.5 297.8,161.8 294.8,167.0 293.0,170.0 290.8,173.8 290.0,172.5 290.0,165.0 292.0,159.8 298.0,151.5 300.5,149.2 302.0,150.8 300.8,150.5 295.5,148.2 290.5,147.5 280.8,147.5 276.5,147.2 273.5,146.5 272.5,144.5 272.5,139.2 270.5,136.5 264.5,133.5 261.8,132.8 259.5,133.5 258.0,135.0 255.8,138.8 254.0,141.5 251.0,146.0 250.5,149.2 252.0,154.5 253.5,157.2 256.5,160.2 257.8,163.5 258.5,170.2 259.5,175.2 261.8,183.5 262.2,187.5 261.5,191.2 259.3,192.2 253.2,191.5 248.5,191.8 240.2,193.2 237.2,195.5 236.5,200.8 235.0,204.2 231.3,209.5 227.3,212.5 219.0,216.2 214.8,218.5 210.3,221.5 207.0,224.2 201.8,229.5 198.2,233.0 193.0,238.2 188.7,242.8 181.2,251.0 176.2,254.8 168.7,257.8 165.2,260.0 162.3,263.8 159.8,266.5 155.2,271.0 153.2,275.5 151.7,284.5 151.7,289.5 153.2,295.5 153.5,299.2 152.8,304.5 151.8,308.5 149.5,315.2 148.5,320.2 147.8,328.5 146.2,331.8 142.5,333.2 140.2,336.2 137.3,343.8 135.0,347.2 131.3,350.2 127.8,353.2 121.0,359.2 117.3,360.2 112.8,357.2 110.3,353.8 107.3,346.2 105.8,342.0 104.2,336.8 102.8,332.2 99.8,324.0 97.3,319.0 92.8,312.2 90.0,308.0 86.2,302.0 84.2,296.5 82.0,286.0 79.8,280.0 75.3,272.5 72.8,267.2 69.8,259.0 68.2,253.2 66.7,244.2 65.0,238.0 61.2,228.2 60.0,222.5 60.0,215.0 60.0,210.8 60.0,205.5 59.5,202.5 58.0,198.8 57.5,195.2 57.5,188.5 56.5,187.7 53.5,192.2 50.0,195.2 42.5,199.8 38.0,201.3 32.0,201.3 27.8,199.8 21.0,195.2 17.4,191.8 13.3,185.8 13.8,183.5 19.4,182.8 23.0,181.3 28.3,177.5 27.8,176.5 21.0,177.2 16.0,175.8 7.8,170.5 4.5,168.0 3.0,165.8 3.5,163.8 6.5,160.0 9.7,159.0 16.5,159.8 20.2,159.8 24.7,159.0 28.7,158.5 36.2,157.8 38.0,154.3 35.7,144.5 33.0,139.0 27.0,132.2 25.5,127.2 27.0,119.0 29.5,115.8 35.5,114.3 39.8,111.3 46.5,103.8 51.3,98.8 58.8,91.3 64.0,86.3 72.3,78.8 77.3,74.3 84.0,68.3 85.5,64.0 83.2,57.2 81.2,54.2 77.5,52.0 77.2,48.8 80.2,41.3 80.0,36.0 76.2,27.8 74.2,23.2 72.0,18.0 71.5,13.5 72.2,5.3Z" fill="none" stroke="var(--primary)" stroke-width="1.6" pointer-events="none"/>
+<g class="islands" fill="var(--soft)" stroke="var(--primary)" stroke-width=".8"><path d="M308.8,293.8 312.5,295.0 313.7,310.0 311.3,317.5 307.5,313.8 308.8,302.5Z"/><path d="M307.5,320.0 311.3,321.2 310.0,330.0 307.5,327.5Z"/><path d="M318.8,347.5 321.3,350.0 320.0,362.5 317.5,358.8Z"/><path d="M321.3,371.2 324.4,373.8 323.1,377.5 320.6,375.6Z"/><circle cx="57.5" cy="330.0" r="2"/><circle cx="52.5" cy="322.5" r="2"/><circle cx="62.5" cy="358.8" r="2"/><circle cx="60.0" cy="350.0" r="2"/></g>
+</svg><div class="pin c1" style="left:30.7%;top:27.3%" title="New Delhi"><span>😊</span></div><div class="pin c2" style="left:25.9%;top:32.7%" title="Jaipur"><span>🧑</span></div><div class="pin c3" style="left:19.7%;top:60.0%" title="Pune"><span>👨</span></div><div class="pin c2" style="left:42.9%;top:33.3%" title="Lucknow"><span>👩</span></div><div class="pin c3" style="left:57.1%;top:36.9%" title="Patna"><span>🧑‍🎓</span></div><div class="pin c1" style="left:34.9%;top:63.6%" title="Hyderabad"><span>👩‍🎓</span></div><div class="tip" id="tip"></div></div>
+      <p class="legend">Darker state = more reviews</p>
+    </div>
+    <div class="col"><article class="note c2"><div class="flip"><div class="front"><b class="num">04</b><span class="avatar">👩</span><b>Aspirant D</b><small>📍 Lucknow</small><span class="hint">Hover to flip ↻</span></div><div class="back"><b class="num">04</b><div class="who"><span class="avatar">👩</span><div><b>Aspirant D</b><br><small>📍 Lucknow</small></div><span class="stars">★★★★★</span></div><p>“The Hindi feedback feels like it was written by a mentor, not a machine.”</p></div></div></article><article class="note c3"><div class="flip"><div class="front"><b class="num">05</b><span class="avatar">🧑‍🎓</span><b>Aspirant E</b><small>📍 Patna</small><span class="hint">Hover to flip ↻</span></div><div class="back"><b class="num">05</b><div class="who"><span class="avatar">🧑‍🎓</span><div><b>Aspirant E</b><br><small>📍 Patna</small></div><span class="stars">★★★★☆</span></div><p>“Daily answer writing with instant feedback fixed my consistency problem months before Mains.”</p></div></div></article><article class="note c1"><div class="flip"><div class="front"><b class="num">06</b><span class="avatar">👩‍🎓</span><b>Aspirant F</b><small>📍 Hyderabad</small><span class="hint">Hover to flip ↻</span></div><div class="back"><b class="num">06</b><div class="who"><span class="avatar">👩‍🎓</span><div><b>Aspirant F</b><br><small>📍 Hyderabad</small></div><span class="stars">★★★★★</span></div><p>“The roadmap and streaks keep me honest every single day. Great value for money.”</p></div></div></article></div>
+  </div>
+  <h3 style="margin-top:40px">Reviews by state</h3>
+  <div class="states"><div class="state">Uttar Pradesh<b>3,200</b><i><u style="width:100%"></u></i></div><div class="state">Bihar<b>2,400</b><i><u style="width:75%"></u></i></div><div class="state">Delhi<b>2,100</b><i><u style="width:66%"></u></i></div><div class="state">Rajasthan<b>1,500</b><i><u style="width:47%"></u></i></div><div class="state">Madhya Pradesh<b>1,300</b><i><u style="width:41%"></u></i></div><div class="state">Maharashtra<b>1,200</b><i><u style="width:38%"></u></i></div><div class="state">Gujarat<b>900</b><i><u style="width:28%"></u></i></div><div class="state">Haryana<b>800</b><i><u style="width:25%"></u></i></div><div class="state">Telangana<b>700</b><i><u style="width:22%"></u></i></div><div class="state">Karnataka<b>650</b><i><u style="width:20%"></u></i></div><div class="state">Jharkhand<b>600</b><i><u style="width:19%"></u></i></div><div class="state">West Bengal<b>600</b><i><u style="width:19%"></u></i></div><div class="state">Tamil Nadu<b>550</b><i><u style="width:17%"></u></i></div><div class="state">Kerala<b>450</b><i><u style="width:14%"></u></i></div><div class="state">Andhra Pradesh<b>400</b><i><u style="width:12%"></u></i></div><div class="state">Odisha<b>380</b><i><u style="width:12%"></u></i></div><div class="state">Punjab<b>350</b><i><u style="width:11%"></u></i></div><div class="state">Uttarakhand<b>300</b><i><u style="width:9%"></u></i></div><div class="state">Chhattisgarh<b>280</b><i><u style="width:9%"></u></i></div><div class="state">Assam<b>220</b><i><u style="width:7%"></u></i></div><div class="state">Himachal Pradesh<b>160</b><i><u style="width:5%"></u></i></div><div class="state">Jammu &amp; Kashmir<b>140</b><i><u style="width:4%"></u></i></div><div class="state">Manipur<b>45</b><i><u style="width:3%"></u></i></div><div class="state">Goa<b>40</b><i><u style="width:3%"></u></i></div><div class="state">Tripura<b>40</b><i><u style="width:3%"></u></i></div><div class="state">Meghalaya<b>35</b><i><u style="width:3%"></u></i></div><div class="state">Arunachal Pradesh<b>30</b><i><u style="width:3%"></u></i></div><div class="state">Nagaland<b>25</b><i><u style="width:3%"></u></i></div><div class="state">Sikkim<b>20</b><i><u style="width:3%"></u></i></div><div class="state">Mizoram<b>15</b><i><u style="width:3%"></u></i></div><div class="state">Ladakh<b>10</b><i><u style="width:3%"></u></i></div></div>
+</div></section>
+
+<!-- ===== Why us ===== -->
+<section><div class="wrap">
+  <span class="tag">Why Us</span><h2>Why Aspirants Choose UPSC ZONE AI?</h2>
+  <div class="grid"><div class="card "><div class="ico">⚙️</div><h3>AI-Powered Precision</h3><p>Smart algorithms for accurate results in evaluations and tests.</p></div><div class="card "><div class="ico">🚀</div><h3>Personalized Roadmaps</h3><p>Custom plans based on your strength, weakness and time.</p></div><div class="card "><div class="ico">⏱️</div><h3>Saves Time</h3><p>Summarized current affairs and instant feedback save hours.</p></div><div class="card "><div class="ico">⭐</div><h3>Trusted by Aspirants</h3><p>A community of 25,000+ serious aspirants.</p></div><div class="card "><div class="ico">🛡️</div><h3>Secure & Reliable</h3><p>Your data is protected with enterprise-grade security.</p></div><div class="card "><div class="ico">🌍</div><h3>Hindi + English</h3><p>Bilingual content for both mediums of the exam.</p></div></div>
+</div></section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq"><div class="wrap" style="max-width:800px">
+  <h2>Frequently Asked Questions</h2><p class="sub">Everything you need to know about UPSC ZONE AI</p>
+  <details><summary>How does the AI Mentor help in UPSC preparation?</summary><p>It answers doubts instantly with UPSC-standard explanations.</p></details><details><summary>Is there a free trial available?</summary><p>Yes. You can start preparing free, and no credit card is required.</p></details><details><summary>Can I attempt tests in Hindi?</summary><p>Yes. The platform supports both Hindi and English.</p></details><details><summary>Are the current affairs updated daily?</summary><p>Yes. Daily, weekly and monthly current affairs come with AI summaries.</p></details><details><summary>Can I access the platform on mobile?</summary><p>Yes, and this page works on phones too.</p></details><details><summary>What is the pricing for premium features?</summary><p>See the pricing page for current plans.</p></details>
+</div></section>
+
+<!-- ===== Call to action ===== -->
+<section><div class="wrap"><div class="cta">
+  <h2>Unlock Your AI Mentor Today!</h2><p>Start your UPSC journey with India’s most advanced AI platform. No credit card required.</p>
+  <a class="btn" href="https://upsczone.in/dashboard">🚀 Start Preparing Free Now</a>
+</div></div></section>
+
+<!-- ===== Footer ===== -->
+<footer><div class="wrap">
+  <div class="cols">
+    <div><div class="logo">UPSC ZONE <b>AI</b></div><p>Empowering aspirants with AI technology to crack UPSC smarter &amp; faster.</p></div>
+    <div><h4>Platform</h4><a href="https://upsczone.in/gs-courses">Courses</a><a href="https://upsczone.in/test-series">Test Series</a><a href="https://upsczone.in/daily-current-affairs-update">Current Affairs</a><a href="https://upsczone.in/free-books">Free UPSC Books</a><a href="https://upsczone.in/practice">Practice</a></div>
+    <div><h4>Company</h4><a href="https://upsczone.in/team">Team</a><a href="https://upsczone.in/pricing">Pricing</a><a href="https://upsczone.in/support">Support</a><a href="https://upsczone.in/contact">Contact Us</a></div>
+    <div><h4>Our Apps</h4><a href="https://upsczone.in/apps">UPSC ZONE AI</a><a href="https://upsczone.in/apps">Uzium</a><a href="https://upsczone.in/apps">ReadBook</a></div>
+  </div>
+  <p>© 2026 UPSC ZONE AI. All rights reserved. · <a style="display:inline" href="https://upsczone.in/terms-and-conditions">Terms</a> · <a style="display:inline" href="https://upsczone.in/privacy-policy">Privacy</a></p>
+</div></footer>
+<a class="help" href="https://upsczone.in/support">💬 Help &amp; Support</a>
+
+<script>
+// 1) Tool filter: show only cards whose data-type matches the clicked button
+document.querySelectorAll(".tabs button").forEach(function (button) {
+  button.onclick = function () {
+    document.querySelectorAll(".tabs button").forEach(function (b) { b.classList.remove("on"); });
+    button.classList.add("on");
+    document.querySelectorAll("#tools .card").forEach(function (card) {
+      card.style.display = (button.dataset.filter === "all" || card.dataset.type === button.dataset.filter) ? "" : "none";
+    });
+  };
+});
+
+// 2) Study-hours splitter: 35% GS, 20% current affairs, 25% writing, 20% revision
+var slider = document.getElementById("hours");
+function updatePlan() {
+  var hours = Number(slider.value), shares = [0.35, 0.2, 0.25, 0.2];
+  document.getElementById("hours-text").textContent = hours;
+  shares.forEach(function (share, i) {
+    var minutes = Math.round(hours * share * 60);
+    document.getElementById("t" + (i + 1)).textContent = Math.floor(minutes / 60) + "h " + (minutes % 60) + "m";
+  });
+}
+slider.oninput = updatePlan;
+updatePlan();
+
+// 3) India map: shade each state by review count, show a tooltip on hover/tap
+var states = document.querySelectorAll(".st");
+var tip = document.getElementById("tip"), map = document.getElementById("map");
+var max = 0;
+states.forEach(function (s) { max = Math.max(max, Number(s.dataset.count)); });
+states.forEach(function (s) {
+  var count = Number(s.dataset.count);
+  s.style.fillOpacity = 0.15 + 0.75 * Math.sqrt(count / max);
+  function show(e) {
+    var box = map.getBoundingClientRect();
+    tip.innerHTML = "<b>" + s.dataset.name + "</b> · " + count.toLocaleString("en-IN") + " reviews";
+    tip.style.left = (e.clientX - box.left) + "px";
+    tip.style.top = (e.clientY - box.top) + "px";
+    tip.classList.add("on");
+  }
+  s.onpointermove = show;
+  s.onpointerdown = show;
+  s.onpointerleave = function () { tip.classList.remove("on"); };
+});
+// 4) Scroll animation: cards fade in one after another when they come into view
+var seen = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("show");
+    seen.unobserve(entry.target);
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll(".card, .note, .state, details, .cta, .tabs").forEach(function (el) {
+  var position = Array.prototype.indexOf.call(el.parentNode.children, el);
+  el.style.transitionDelay = (position % 4) * 100 + "ms";
+  el.addEventListener("transitionend", function () { el.style.transitionDelay = ""; }, { once: true });
+  el.classList.add("reveal");
+  seen.observe(el);
+});
+
+// 5) Count-up numbers in the hero
+var counter = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+    var el = entry.target, end = Number(el.dataset.to), decimals = Number(el.dataset.dec), start = null;
+    counter.unobserve(el);
+    function step(time) {
+      if (start === null) start = time;
+      var progress = Math.min((time - start) / 1500, 1);
+      el.textContent = (end * progress).toLocaleString("en-IN", { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + (progress === 1 ? el.dataset.suffix : "");
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+});
+document.querySelectorAll(".count").forEach(function (el) { counter.observe(el); });
+
+// 6) Map: when it scrolls into view, states appear one by one, then the pins drop in
+var mapSeen = new IntersectionObserver(function (entries) {
+  if (!entries[0].isIntersecting) return;
+  mapSeen.disconnect();
+  states.forEach(function (s, i) { s.style.transitionDelay = i * 40 + "ms"; });
+  document.querySelectorAll(".pin").forEach(function (p, i) { p.style.animationDelay = 1.2 + i * 0.2 + "s"; });
+  map.classList.add("play");
+}, { threshold: 0.3 });
+mapSeen.observe(map);
+// 7) Make review cards focusable so keyboard users can open them too
+document.querySelectorAll(".note").forEach(function (note) { note.tabIndex = 0; });
+</script>
+</body>
+</html>
